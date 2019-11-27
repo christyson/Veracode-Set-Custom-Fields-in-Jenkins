@@ -12,4 +12,4 @@ See the file for the snippet.  It relies on the following variables for usw with
 5. JiraProjectName:           the name of your project in Jira
 </pre></code>
 
-** Note: assumes your Jenkins script can use java, grep and td. **
+## Note: assumes your Jenkins script can use java, grep and td. 
