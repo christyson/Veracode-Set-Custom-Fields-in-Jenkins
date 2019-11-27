@@ -1,7 +1,7 @@
 # Veracode-Set-Custom-Fields-in-Jenkins
 A snippet for a Jenkins pipeline to set both Application and Sandbox level custom fields for use with the Jira integration.
 
-See the file for the snippet.  It relies on the following variables for usw with a pipeline with build parameters:
+See the [snippet](https://github.com/christyson/Veracode-Set-Custom-Fields-in-Jenkins/blob/master/Veracode%20Set%20Custom%20Field%20Snippet).  It relies on the following variables for usw with a pipeline with build parameters:
 <pre><code>
 1. VC_ProjectName:            your Veracode project name
 2. VERACODE_WRAPPER_VERSION:  set to the latest release number of the Veracode Java Wrapper (currently: 19.11.6.0) 
