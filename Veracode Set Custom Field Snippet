@@ -1,6 +1,6 @@
    stage('Veracode Set Custom Field') {
       // Check severity of results
-      sh 'wget -q -O veracode-wrapper.jar https://protect-us.mimecast.com/s/5QWdCxk1MycmpozLUYORss?domain=repo1.maven.org'
+      sh 'wget -q -O veracode-wrapper.jar https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/${VERACODE_WRAPPER_VERSION}/vosp-api-wrappers-java-${VERACODE_WRAPPER_VERSION}.jar'
       withCredentials([usernamePassword(credentialsId: 'Veracode', passwordVariable: 'VERACODEKEY', usernameVariable: 'VERACODEID')]) {
          sh '''
             appid=$(java -jar veracode-wrapper.jar -vid ${VERACODEID} -vkey ${VERACODEKEY} -action getapplist | grep "${VC_ProjectName}" | grep -oE '"[0-9][0-9]*"' | tr -d '"')
