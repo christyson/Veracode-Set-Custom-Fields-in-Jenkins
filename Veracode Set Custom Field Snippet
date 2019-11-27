@@ -1,0 +1,14 @@
+   stage('Veracode Set Custom Field') {
+      // Check severity of results
+      sh 'wget -q -O veracode-wrapper.jar https://protect-us.mimecast.com/s/5QWdCxk1MycmpozLUYORss?domain=repo1.maven.org'
+      withCredentials([usernamePassword(credentialsId: 'Veracode', passwordVariable: 'VERACODEKEY', usernameVariable: 'VERACODEID')]) {
+         sh '''
+            appid=$(java -jar veracode-wrapper.jar -vid ${VERACODEID} -vkey ${VERACODEKEY} -action getapplist | grep "${VC_ProjectName}" | grep -oE '"[0-9][0-9]*"' | tr -d '"')
+            java -jar veracode-wrapper.jar -vid ${VERACODEID} -vkey ${VERACODEKEY} -action updateapp -appid ${appid} -customfieldname "${CustomField}" -customfieldvalue "${JiraProjectName}"
+            if [ $SandboxName != "" ]; then
+               sandboxid=$(java -jar veracode-wrapper.jar -vid ${VERACODEID} -vkey ${VERACODEKEY} -action getsandboxlist -appid ${appid} | grep "${SandboxName}" | grep -oE '"[0-9]*"' | tr -d '"')
+               java -jar veracode-wrapper.jar -vid ${VERACODEID} -vkey ${VERACODEKEY} -action updatesandbox -appid ${appid} -sandboxid ${sandboxid} -customfieldname "${CustomField}" -customfieldvalue "${JiraProjectName}"
+            fi
+         '''
+        } 
+    }
