@@ -10,6 +10,7 @@ See the [snippet](https://github.com/christyson/Veracode-Set-Custom-Fields-in-Je
 5. JiraProjectName:           the name of your project in Jira
 </pre></code>
 
-  ####  Note: the Veracode wrapper version can be found can be found [here](https://help.veracode.com/reader/LMv_dtSHyb7iIxAQznC~9w/OwyjPkzVaNJWGh7IPPF1OQ)
+####  Notes: 
 
-### Note: assumes your Jenkins script can use java, grep and td. 
+- The Veracode wrapper version can be found can be found [here](https://help.veracode.com/reader/LMv_dtSHyb7iIxAQznC~9w/OwyjPkzVaNJWGh7IPPF1OQ)
+- The snippet assumes your Jenkins script can use java, grep and td. 
