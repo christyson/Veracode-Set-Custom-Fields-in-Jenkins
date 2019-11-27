@@ -5,7 +5,7 @@ See the [snippet](https://github.com/christyson/Veracode-Set-Custom-Fields-in-Je
 <pre><code>
 1. VC_ProjectName:            your Veracode project name
 2. VERACODE_WRAPPER_VERSION:  set to the latest release number of the Veracode Java Wrapper (currently: 19.11.6.0) 
-                              can be found [here](https://help.veracode.com/reader/LMv_dtSHyb7iIxAQznC~9w/OwyjPkzVaNJWGh7IPPF1OQ)
+                              can be found </pre></code>[here](https://help.veracode.com/reader/LMv_dtSHyb7iIxAQznC~9w/OwyjPkzVaNJWGh7IPPF1OQ)<pre><code>
 3. SandboxName:               your sandbox name if you are using one
 4. CustomField:               Custom field name you want to set typically Custom 1
 5. JiraProjectName:           the name of your project in Jira
