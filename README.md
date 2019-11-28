@@ -13,4 +13,4 @@ See the [snippet](https://github.com/christyson/Veracode-Set-Custom-Fields-in-Je
 ####  Notes: 
 
 - Information about the  Veracode wrapper version can be found can be found [here](https://help.veracode.com/reader/LMv_dtSHyb7iIxAQznC~9w/OwyjPkzVaNJWGh7IPPF1OQ) and  the Veracode wrapper version can be found can be found [here](https://search.maven.org/search?q=a:vosp-api-wrappers-java)
-- The snippet assumes your Jenkins script can use java, grep and td. 
+- The snippet assumes your Jenkins script can use wget, java, grep and td. 
